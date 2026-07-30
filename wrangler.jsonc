@@ -1,0 +1,20 @@
+{
+  "name": "fiche-fiscale-cloudflare",
+  "main": "src/index.js",
+  "compatibility_date": "2026-07-01",
+
+  // Les fichiers du dossier public sont servis directement.
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS"
+  },
+
+  // 10:00 UTC = 12:00 à Paris en heure d'été, 11:00 en heure d'hiver.
+  "triggers": {
+    "crons": ["0 10 * * *"]
+  },
+
+  "observability": {
+    "enabled": true
+  }
+}
