@@ -1,5 +1,5 @@
 {
-  "name": "fiche-fiscale-cloudflare",
+  "name": "fichefiscale",
   "main": "src/index.js",
   "compatibility_date": "2026-07-01",
 
