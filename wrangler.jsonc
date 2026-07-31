@@ -1,0 +1,31 @@
+{
+  "name": "fiche-fiscale-cloudflare1",
+  "main": "src/index.js",
+  "compatibility_date": "2026-07-01",
+
+  // Les fichiers du dossier public sont servis directement.
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS"
+  },
+
+  // Variables non sensibles. Elles doivent figurer ici : ce fichier fait
+  // autorité, et toute variable en clair saisie dans le tableau de bord
+  // est effacée au déploiement suivant si elle n'y est pas déclarée.
+  // Les secrets (clés, jetons) restent dans le tableau de bord.
+  "vars": {
+    "SITE_URL": "https://fiscal.rayanemakangui.com",
+    "BREVO_LIST_ID": "2",
+    "SENDER_NAME": "Fiche fiscale",
+    "MODE_ENVOI": "drip"
+  },
+
+  // 10:00 UTC = 12:00 à Paris en heure d'été, 11:00 en heure d'hiver.
+  "triggers": {
+    "crons": ["0 10 * * *"]
+  },
+
+  "observability": {
+    "enabled": true
+  }
+}
